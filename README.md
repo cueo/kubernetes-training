@@ -21,6 +21,9 @@
   - If we want to move to a newer version of the app
 - If we don't want rolling update for some reason, we can use `Recreate` strategy in `spec.strategy.type: Recreate`
 
+#### Label
+- Can be attached to pods for organizing purposes
+
 ### Example yaml for Pod
 ```yaml
 apiVersion: v1
@@ -64,4 +67,10 @@ kubectl delete rs <replicaset-name>
 
 # Scale on the fly
 kubectl scale deploy/nginx-deploy --replicas=2
+
+# Labels
+kubectl get pods --show-labels
+kubectl get pods -l app=nginx
+kubectl get pods -l app=!nginx
+kubectl get pods -l app
 ```

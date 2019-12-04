@@ -1,11 +1,19 @@
 ## Kubernetes Training
 
 ### Notes
+#### Kubernetes
 - Node = Bare metal machine
+- Add `context.namespace` in kube config to override default namespace
+- `kubectly apply` should be used always (create / update)
+
+#### Pods
 - Each pod have their own ip
 - Pods communicated without NAT
 - One node can have pods across NS
-- Add `context.namespace` in kube config to override default namespace
+
+#### Replica Set
+- Maintain a set of pod in a stable state
+- Specify a number of pods, on deletion of a pod another pod automatically comes up
 
 ### Example yaml for Pod
 ```yaml
@@ -44,4 +52,16 @@ kubectl get pods -n mmayank -o wide
 - Describe pod on a NS
 ```sh
 kubectl describe pods -n mmayank
+```
+- Delete a pod
+```sh
+kubectl delete pod <pod-name>
+```
+- Create a replicaset
+```sh
+kubectl apply -f yaml/replicatset.yaml
+```
+- Delete a replicaset
+```sh
+kubectl delete rs <replicaset-name>
 ```

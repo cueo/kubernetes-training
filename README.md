@@ -19,6 +19,7 @@
 #### Deployment
 - Useful for rolling deployements
   - If we want to move to a newer version of the app
+- If we don't want rolling update for some reason, we can use `Recreate` strategy in `spec.strategy.type: Recreate`
 
 ### Example yaml for Pod
 ```yaml

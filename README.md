@@ -33,40 +33,31 @@ spec:
 ```
 
 ### Commands
-- Create pod from yaml (on default namespace)
 ```sh
+# Create pod from yaml (on default namespace)
 kubectl create -f pod.yaml
-```
-- Create a namespace
-```sh
-kubectl create namespace mmayank
-```
 
-- Create pod on a given namespace
-```sh
+# Create a namespace
+kubectl create namespace mmayank
+
+# Create pod on a given namespace
 kubectl create -f pod.yaml -n mmayank
-```
-- Get list of pods on a NS
-```sh
+
+# Get list of pods on a NS
 kubectl get pods -n mmayank
-```
-- Get list of pods with node, IP info
-```sh
+
+# Get list of pods with node, IP info
 kubectl get pods -n mmayank -o wide
-```
-- Describe pod on a NS
-```sh
+
+# Describe pod on a NS
 kubectl describe pods -n mmayank
-```
-- Delete a pod
-```sh
+
+# Delete a pod
 kubectl delete pod <pod-name>
-```
-- Create a replicaset
-```sh
+
+# Create a replicaset
 kubectl apply -f yaml/replicatset.yaml
-```
-- Delete a replicaset
-```sh
+
+# Delete a replicaset
 kubectl delete rs <replicaset-name>
 ```

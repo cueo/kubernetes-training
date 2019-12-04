@@ -5,6 +5,7 @@
 - Node = Bare metal machine
 - Add `context.namespace` in kube config to override default namespace
 - `kubectly apply` should be used always (create / update)
+- Use `-w` flag to watch the change in the resources
 
 #### Pods
 - Each pod have their own ip
@@ -14,6 +15,10 @@
 #### Replica Set
 - Maintain a set of pod in a stable state
 - Specify a number of pods, on deletion of a pod another pod automatically comes up
+
+#### Deployment
+- Useful for rolling deployements
+  - If we want to move to a newer version of the app
 
 ### Example yaml for Pod
 ```yaml

@@ -61,4 +61,7 @@ kubectl apply -f yaml/replicatset.yaml
 
 # Delete a replicaset
 kubectl delete rs <replicaset-name>
+
+# Scale on the fly
+kubectl scale deploy/nginx-deploy --replicas=2
 ```
